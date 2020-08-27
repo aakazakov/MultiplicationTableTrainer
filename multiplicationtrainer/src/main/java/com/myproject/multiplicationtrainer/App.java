@@ -8,15 +8,17 @@ import javafx.stage.Stage;
 
 import java.io.IOException;
 
-/**
- * JavaFX App
- */
 public class App extends Application {
+  
+  private Parent root;
+  private Scene scene;
 
   @Override
   public void start(Stage stage) throws IOException {
-    Parent root = FXMLLoader.load(getClass().getResource("main.fxml"));
-    stage.setScene(new Scene(root, 400, 400));
+    root = FXMLLoader.load(getClass().getResource("main.fxml"));
+    scene = new Scene(root, 400, 400);
+    scene.getStylesheets().add(getClass().getResource("style.css").toExternalForm());
+    stage.setScene(scene);
     stage.setTitle("Rise your skills...");
     stage.show();
   }
