@@ -7,12 +7,16 @@
   -fx-background-color: lightyellow;
   -fx-padding: 5px;
   -fx-font-size: large;
+  -fx-alignment: center-left;
+  -fx-spacing: 10px;
 }
 
 .info__label {
-    
+  -fx-margin-right: 5px;
 }
 
 .info__field {
-  
+  -fx-max-width: 50px;
+  -fx-focus-traversable: false;
+  -fx-blend-mode: "MULTIPLY";
 }
