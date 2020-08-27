@@ -1,3 +1,18 @@
 .main {
   -fx-background-color: lightblue;
+  -fx-font-family: "Comic Sans MS", "Calibry";
+}
+
+.info {
+  -fx-background-color: lightyellow;
+  -fx-padding: 5px;
+  -fx-font-size: large;
+}
+
+.info__label {
+    
+}
+
+.info__field {
+  
 }
