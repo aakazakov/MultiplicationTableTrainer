@@ -16,7 +16,7 @@ public class App extends Application {
   @Override
   public void start(Stage stage) throws IOException {
     root = FXMLLoader.load(getClass().getResource("main.fxml"));
-    scene = new Scene(root, 400, 400);
+    scene = new Scene(root);
     scene.getStylesheets().add(getClass().getResource("style.css").toExternalForm());
     stage.setScene(scene);
     stage.setTitle("Rise your skills...");

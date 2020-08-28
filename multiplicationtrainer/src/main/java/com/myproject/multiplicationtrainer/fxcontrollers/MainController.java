@@ -25,8 +25,8 @@ public class MainController implements Initializable {
 
   @Override
   public void initialize(URL location, ResourceBundle resources) {
-    lblScoreRight.setText("Right");
-    lblScoreWrong.setText("Wrong");
+    lblScoreRight.setText("Right:");
+    lblScoreWrong.setText("Wrong:");
     tfScoreRight.setText("0");
     tfScoreRight.setEditable(false);
     tfScoreWrong.setText("0");

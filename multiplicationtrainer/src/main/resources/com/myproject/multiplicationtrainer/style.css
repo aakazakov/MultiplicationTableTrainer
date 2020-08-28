@@ -1,22 +1,63 @@
 .main {
-  -fx-background-color: lightblue;
+  -fx-background-color: orange;
   -fx-font-family: "Comic Sans MS", "Calibry";
+  -fx-pref-width: 400px;
+  -fx-max-height: "Infinity";
 }
 
 .info {
-  -fx-background-color: lightyellow;
-  -fx-padding: 5px;
-  -fx-font-size: large;
+  -fx-padding: 20px;
+  -fx-font-size: 20;
   -fx-alignment: center-left;
   -fx-spacing: 10px;
 }
 
 .info__label {
   -fx-margin-right: 5px;
+  -fx-text-fill: white; 
 }
 
 .info__field {
   -fx-max-width: 50px;
   -fx-focus-traversable: false;
-  -fx-blend-mode: "MULTIPLY";
+  -fx-background-color: orange;
+  -fx-border-color: white;
+  -fx-text-fill: white;
 }
+
+.task {
+  -fx-background-color: lightgreen;
+  -fx-focus-traversable: false;
+  -fx-padding: 40px;
+  -fx-font-size: 30;
+}
+
+.task__expression {
+  -fx-max-width: 150px;
+}
+
+.task__equals {
+  -fx-max-width: 50px;
+}
+
+.task__answer {
+  -fx-max-width: 100px;
+}
+
+.operations {
+  -fx-alignment: "CENTER_RIGHT";
+  -fx-padding: 20px;
+  -fx-font-size: 20;
+}
+
+.operations__check-btn {
+  -fx-focus-traversable: false;
+  -fx-cursor: "HAND";
+}
+
+.info__field,
+.task__expression,
+.task__answer {
+  -fx-alignment: "CENTER";
+}
+
