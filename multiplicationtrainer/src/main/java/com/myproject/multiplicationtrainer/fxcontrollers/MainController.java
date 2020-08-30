@@ -12,6 +12,8 @@ import javafx.scene.control.TextField;
 
 public class MainController implements Initializable {
   
+  private int rightScore;
+  private int wrongScore;
   private GUIListener listener;
   
   @FXML
@@ -26,10 +28,14 @@ public class MainController implements Initializable {
   private TextField tfExpression;
   
   public MainController(GUIListener listener) {
+    this();
     this.listener = listener;
   }
   
-  public MainController() { }
+  public MainController() {
+    this.rightScore = 0;
+    this.wrongScore = 0;
+  }
   
   @FXML
   private void exitAction() {
