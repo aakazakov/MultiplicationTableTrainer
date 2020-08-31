@@ -27,21 +27,24 @@
 
 .task {
   -fx-background-color: lightgreen;
-  -fx-focus-traversable: false;
   -fx-padding: 40px;
   -fx-font-size: 30;
 }
 
 .task__expression {
+  -fx-focus-traversable: false;
   -fx-max-width: 150px;
+  -fx-text-inner-color: darkblue;
 }
 
 .task__equals {
   -fx-max-width: 50px;
+  -fx-text-fill: darkblue;
 }
 
 .task__answer {
   -fx-max-width: 100px;
+  -fx-text-inner-color: darkblue;
 }
 
 .operations {

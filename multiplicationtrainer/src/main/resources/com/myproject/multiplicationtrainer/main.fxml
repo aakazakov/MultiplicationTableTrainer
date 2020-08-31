@@ -34,13 +34,13 @@
 		<children>
 			<TextField fx:id="tfExpression" GridPane.columnIndex="0" styleClass="task__expression" />
 			<Label text=" = " GridPane.columnIndex="1"  styleClass="task__equals" />
-			<TextField GridPane.columnIndex="2" styleClass="task__answer" />
+			<TextField fx:id="tfAnswer" GridPane.columnIndex="2" styleClass="task__answer" onAction="#checkAction" />
 		</children>
 		<rowConstraints>
       <RowConstraints />
 		</rowConstraints>
    </GridPane>
    <HBox styleClass="operations">
-      <Button text="Checking" styleClass="operations__check-btn" />
+      <Button text="Checking" styleClass="operations__check-btn" onAction="#checkAction" />
    </HBox>
 </VBox>

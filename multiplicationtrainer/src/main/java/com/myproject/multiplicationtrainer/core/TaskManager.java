@@ -6,8 +6,9 @@ import com.myproject.multiplicationtrainer.interfaces.GUIListener;
 
 public class TaskManager implements GUIListener {
   
-  private final char multiOperator = 'x';
+  private final char multOperator = 'x';
   private final char divOperator = ':';
+  private final int edge = 9;
   
   private int a;
   private int b;
@@ -19,15 +20,15 @@ public class TaskManager implements GUIListener {
   public TaskManager() {
     random = new Random();
     multiply = true;
-    init(9);
   }
 
   @Override
   public String getTask() {
+    initVariables(edge);
     if (multiply) {
       answer = c;
       multiply = false;
-      return String.format("%d %c %d", a, multiOperator, b);
+      return String.format("%d %c %d", a, multOperator, b);
     }
     answer = a;
     multiply = true;
@@ -39,7 +40,7 @@ public class TaskManager implements GUIListener {
     return this.answer == answer;
   }
   
-  private void init(int edge) {
+  private void initVariables(int edge) {
     a = random.nextInt(edge - 1) + 2;
     b = random.nextInt(edge - 1) + 2;
     c = a * b;
