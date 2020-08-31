@@ -22,13 +22,13 @@ public class MainController implements Initializable {
   private GUIListener listener;
   
   @FXML
-  private Label lblScoreRight;
+  private Label lblRightScore;
   @FXML
-  private Label lblScoreWrong;
+  private Label lblWrongScore;
   @FXML
-  private TextField tfScoreRight;
+  private TextField tfRightScore;
   @FXML
-  private TextField tfScoreWrong;
+  private TextField tfWrongScore;
   @FXML
   private TextField tfExpression;
   @FXML
@@ -51,13 +51,13 @@ public class MainController implements Initializable {
 
   @Override
   public void initialize(URL location, ResourceBundle resources) {
-    lblScoreRight.setText(rightLabel);
-    tfScoreRight.setText(intToString(rightScore));
-    tfScoreRight.setEditable(false);
+    lblRightScore.setText(rightLabel);
+    tfRightScore.setText("0");
+    tfRightScore.setEditable(false);
     
-    lblScoreWrong.setText(wrongLabel);
-    tfScoreWrong.setText(intToString(wrongScore));
-    tfScoreWrong.setEditable(false);
+    lblWrongScore.setText(wrongLabel);
+    tfWrongScore.setText("0");
+    tfWrongScore.setEditable(false);
     
     tfExpression.setText(getTask());
     tfExpression.setEditable(false);
@@ -74,13 +74,13 @@ public class MainController implements Initializable {
       boolean verified = listener.check(answer);
       if (verified) {
         rightScore++;
-        tfScoreRight.setText(intToString(rightScore));
+        tfRightScore.setText(intToString(rightScore));
         tfAnswer.setStyle(rightStyle);
         tfAnswer.clear();
         tfExpression.setText(getTask());
       } else {
         wrongScore++;
-        tfScoreWrong.setText(intToString(wrongScore));
+        tfWrongScore.setText(intToString(wrongScore));
         tfAnswer.setStyle(wrongStyle);
       }    
     }
@@ -96,5 +96,21 @@ public class MainController implements Initializable {
   
   private String intToString(int i) {
     return i + "";
+  }
+  
+  @FXML
+  private void resetAllAction() {
+    resetScoreAction();
+    tfAnswer.setStyle(rightStyle);
+    tfAnswer.clear();
+    tfExpression.setText(getTask());
+  }
+  
+  @FXML
+  private void resetScoreAction() {
+    rightScore = 0;
+    wrongScore = 0;
+    tfRightScore.setText("0");
+    tfWrongScore.setText("0");
   }
 }
