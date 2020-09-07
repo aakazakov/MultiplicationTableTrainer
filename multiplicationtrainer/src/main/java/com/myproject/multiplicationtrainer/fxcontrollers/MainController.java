@@ -22,17 +22,17 @@ public class MainController implements Initializable {
   private GUIListener listener;
   
   @FXML
-  private Label lblRightScore;
+  public Label lblRightScore;
   @FXML
-  private Label lblWrongScore;
+  public Label lblWrongScore;
   @FXML
-  private TextField tfRightScore;
+  public TextField tfRightScore;
   @FXML
-  private TextField tfWrongScore;
+  public TextField tfWrongScore;
   @FXML
-  private TextField tfExpression;
+  public TextField tfExpression;
   @FXML
-  private TextField tfAnswer;
+  public TextField tfAnswer;
   
   public MainController(GUIListener listener) {
     this();
@@ -44,8 +44,7 @@ public class MainController implements Initializable {
     this.wrongScore = 0;
   }
   
-  @FXML
-  private void exitAction() {
+  public void exitAction() {
     System.exit(0);
   }
 
@@ -67,8 +66,7 @@ public class MainController implements Initializable {
     return listener.getTask();
   }
   
-  @FXML
-  private void checkAction() {
+  public void checkAction() {
     Integer answer = getIntValueFromAnswerField();
     if (answer != null) {
       boolean verified = listener.check(answer);
@@ -98,16 +96,14 @@ public class MainController implements Initializable {
     return i + "";
   }
   
-  @FXML
-  private void resetAllAction() {
+  public void resetAllAction() {
     resetScoreAction();
     tfAnswer.setStyle(rightStyle);
     tfAnswer.clear();
     tfExpression.setText(getTask());
   }
   
-  @FXML
-  private void resetScoreAction() {
+  public void resetScoreAction() {
     rightScore = 0;
     wrongScore = 0;
     tfRightScore.setText("0");
